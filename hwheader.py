@@ -47,6 +47,7 @@ def main():
     infile.write("# " + AN + "\n" + "\n")
     infile.write(oldText)
     infile.close()
+    print("Done!")
     exit()
 
 if __name__ == "__main__":
