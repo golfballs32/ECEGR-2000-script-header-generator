@@ -39,7 +39,7 @@ def main():
     
     argLen = len(sys.argv)  #check arguments passed by user
     if(argLen != 4):
-        print("Invalid Arguments, please make arguments in the form of sctipt assignment-number assignment-name")
+        print("Invalid Arguments, please make arguments in the form of script assignment-number assignment-name")
         exit()
     
     script = str(sys.argv[1]) #assign arguments to variables, get date
