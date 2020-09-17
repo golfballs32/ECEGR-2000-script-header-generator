@@ -20,27 +20,26 @@ from datetime import date
 
 def main():
     
-    argLen = len(sys.argv)
+    argLen = len(sys.argv)  #check arguments passed by user
     if(argLen != 4):
         print("Invalid Arguments, please make arguments in the form of sctipt assignment-number assignment-name")
         exit()
     
-    script = str(sys.argv[1])
+    script = str(sys.argv[1]) #assign arguments to variables, get date
     AS = str(sys.argv[2])
     AN = str(sys.argv[3])
     today = date.today()
     d3 = today.strftime("%m/%d/%y")
     
-    f = open(script, "r")
+    f = open(script, "r")   #ensure target script doesn't already have header
     if("# File Name: " in f.readline()):
         print("Header already in file")
         exit()
     f.seek(0)
     oldText = f.read()
-    print(oldText)
     f.close()
     
-    infile = open(script, "w")
+    infile = open(script, "w") #write header to script
     infile.seek(0)
     infile.write("# File Name: " + lastName + "_" + firstName + "_AS" + AS + ".py\n")
     infile.write("# File Path:  /home/python/userName/" + lastName + "_" + firstName + "_AS" + AS + ".py\n")
@@ -55,5 +54,5 @@ def main():
     print("Done!")
     exit()
 
-if __name__ == "__main__":
+if __name__ == "__main__": #idk it doesn't work without this. try googling it
     main()
