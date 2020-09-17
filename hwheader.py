@@ -32,7 +32,12 @@ def main():
     d3 = today.strftime("%m/%d/%y")
     
     f = open(script, "r")
+    if("# File Name: " in f.readline()):
+        print("Header already in file")
+        exit()
+    f.seek(0)
     oldText = f.read()
+    print(oldText)
     f.close()
     
     infile = open(script, "w")
