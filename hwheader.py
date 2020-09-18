@@ -68,7 +68,16 @@ def main():
     infile.write("# " + AN + "\n" + "\n")
     infile.write(oldText)
     infile.close()
-    print("Done!")
+    
+    print("\n# File Name: " + lastName + "_" + firstName + "_AS" + AS + ".py")
+    print("# File Path:  /home/python/userName/" + lastName + "_" + firstName + "_AS" + AS + ".py")
+    print("# Run Command: sudo python3 /home/python/userName/" + lastName + "_" + firstName + "_AS" + AS + ".py\n")
+    print("# " + firstName + " " + lastName)
+    print("# Date " + d3)
+    print("# AS." + AS)
+    print("# " + AN)
+    
+    print("\nDone!")
     exit()
 
 if __name__ == "__main__": #idk it doesn't work without this. try googling it
